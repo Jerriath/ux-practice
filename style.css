@@ -16,6 +16,10 @@
 
 /*----- Header styles -----*/
 
+header {
+
+}
+
 /*Main-Nav styles*/
 .main-nav {
 
@@ -30,8 +34,20 @@
 
 /*----- Main Content styles -----*/
 
+main {
+
+}
+
 /*Article Section styles*/
 .article-section {
+
+}
+
+.main-article {
+
+}
+
+.sub-article {
 
 }
 
@@ -40,14 +56,47 @@ aside {
 
 }
 
+.newsletter {
+    
+}
+
 /*Explore Section styles*/
 .explore-section {
+
+}
+
+.accessability {
+
+}
+
+.generator {
+
+}
+
+.boilerplate {
 
 }
 
 
 
 /*----- Footer styles -----*/
+
+/* footer {
+    background-image: url("https://www.smashingmagazine.com/images/footer/large-screen__left.svg");
+    background-repeat: no-repeat;
+    background-size: 12em auto;
+    background-color: #d33a2c;
+    width: 1000px;
+    height: 500px;
+} */
+
+footer {
+
+}
+
+.company-msg {
+
+}
 
 /*Footer Topics styles*/
 .footer-topics {
@@ -56,7 +105,7 @@ aside {
 
 /*Footer Links styles*/
 .footer-links {
-    
+
 }
 
 
