@@ -2,19 +2,66 @@
     1. Header styles
         1.a) main-nav
         1.b) article-nav
-    2. 
-
-
-
-
-
-
-
-
+    2. Main Content styles
+        2.a) Article Section styles
+        2.b) Newsletter Aside styles
+        2.c) Explore Section styles
+    3. Footer styles
+        3.a) Footer Topics styles
+        3.b) Footer Links styles
+    4. General styles (like fonts and buttons)
 ----------------------------------------*/
 
 
 
+/*----- Header styles -----*/
+
+/*Main-Nav styles*/
+.main-nav {
+
+}
+
+/*article-nav*/
+.article-nav {
+
+}
+
+
+
+/*----- Main Content styles -----*/
+
+/*Article Section styles*/
+.article-section {
+
+}
+
+/*Newsletter Aside styles*/
+aside {
+
+}
+
+/*Explore Section styles*/
+.explore-section {
+
+}
+
+
+
+/*----- Footer styles -----*/
+
+/*Footer Topics styles*/
+.footer-topics {
+
+}
+
+/*Footer Links styles*/
+.footer-links {
+    
+}
+
+
+
+/*----- General styles -----*/
 
 .sans-serif-font {
     font-family: 'Fira Sans', sans-serif;
