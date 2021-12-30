@@ -18,21 +18,96 @@
 
 header {
     width: 100%;
-    height: 11em;
-    background: rgba(160, 160, 160, 0.5);
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    position: relative;
+    top: 0.7rem;
+    flex-shrink: 0;
 }
 
 /*Main-Nav styles*/
-.main-nav {
+.header-main {
     width: 100%;
-    height: 60%;
-    background: rgb(63, 63, 63);
+    background-color: #d33a2c;
+    display: grid;
+    font-size: 22px;
+    padding: 1rem 2em;
+    grid-template-columns: min-content minmax(140px,2fr) 0 minmax(100px,350px);
+    align-items: center;
+    column-gap: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+.main-nav {
+    width: auto;
+    height: 100%;
+    grid-column: auto;
+}
+
+.main-list {
+    display: flex;
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+    width: 100%;
+    height: calc(100% - 0.8em);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4em 0;
+}
+
+.main-item {
+    padding: .35em .9em;
+}
+
+.more {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 11px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+    padding: .4em .5rem .4em 1rem;
+    box-shadow: 0 13px 7px -15px rgb(50 50 93 / 25%), 0 8px 16px -8px rgb(0 0 0 / 30%), 0 -6px 16px -6px rgb(0 0 0 / 3%);
+}
+
+.more::after {
+    background-image: url("./assets/cat.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    width: 30px;
+    height: 30px;
+    margin-left: 9px;
+    display: block;
+}
+
+form {
+    max-width: 500px;
+}
+
+.search {
+    width: 100%;
+    padding: 0;
+    border: 0;
 }
 
 /*article-nav*/
-.article-nav {
+.header-sub {
     width: 100%;
-    height: 40%;
+}
+
+.article-nav {
+
 }
 
 
@@ -42,7 +117,6 @@ header {
 main {
     width: 85%;
     max-width: 1440px;
-    height: 140vh;
     margin: 0 auto;
     margin-bottom: 3rem;
     display: flex;
@@ -52,12 +126,10 @@ main {
 /*Article Section styles*/
 .article-section {
     width: 60%;
-    height: 68%
 }
 
 .main-article {
     width: calc(100% - 2rem);
-    height: calc(50% - 5.25rem);
     padding: 0 1rem;
     margin-top: 2.25rem;
     margin-bottom: 3rem;
@@ -65,67 +137,57 @@ main {
 
 .main-header {
     width: 100%;
-    height: 50%;
-    background-color: rgb(70, 70, 70);
 }
 
 .main-content {
     width: 100%;
-    height: calc(50% - 20px);
     margin: 10px 0;
-    background-color: rgb(160, 160, 160);
 }
 
 .sub-article {
     width: calc(100% - 2rem);
-    height: calc(25% - 3rem);
     padding: 0 1rem;
     margin-bottom: 3rem;
 }
 
 .sub-header {
     width: 100%;
-    height: 100%;
-    background-color:rgb(129, 129, 129);
 }
 
 /*Newsletter Aside styles*/
 aside {
     width: 40%;
-    height: calc(68% - 20px);
     padding-top: 20px;
 }
 
 .newsletter {
     width: 91.66666%;
-    height: 70%;
     margin-top: 125px;
     margin-left: 8.33333%;
-    background-color: rgb(129, 129, 129);
 }
 
 /*Explore Section styles*/
 .explore-section {
     width: 100%;
-    height: 32%;
     padding: 0 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 0 1.5rem;
+    background: #fff;
 }
 
 .accessability {
-    background-color: rgb(180, 180, 180);
+    background-color: #f1fdf8;
     margin: 1.5rem 0;
 }
 
 .generator {
-    background-color: rgb(180, 180, 180);
+    background-color: #fef1f0;
     margin: 1.5rem 0;
 }
 
 .boilerplate {
-    background-color: rgb(180, 180, 180);
+    background-color: #fbecf9;
     margin: 1.5rem 0;
 }
 
@@ -133,19 +195,15 @@ aside {
 
 /*----- Footer styles -----*/
 
-/* footer {
+footer {
     background-image: url("https://www.smashingmagazine.com/images/footer/large-screen__left.svg");
     background-repeat: no-repeat;
     background-size: 12em auto;
+    background-position: left 15% bottom 2em;
     background-color: #d33a2c;
-    width: 1000px;
-    height: 500px;
-} */
-
-footer {
-    height: 650px;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
     width: 100%;
-    background-color: rgb(209, 209, 209);
 }
 
 .company-msg {
@@ -168,6 +226,10 @@ footer {
 
 body {
     margin: 0;
+}
+
+ul {
+    padding: 0;
 }
 
 .sans-serif-font {
