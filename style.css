@@ -93,12 +93,29 @@ header {
 
 form {
     max-width: 500px;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 11px;
 }
 
 .search {
     width: 100%;
     padding: 0;
     border: 0;
+    font-size: 22px;
+    background: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    border-radius: 11px;
+    padding: 1rem 15px 1rem 52px;
+    background-image: url("./assets/search.svg");
+    background-repeat: no-repeat;
+    background-position: 15px 45%;
+    box-shadow: 0 13px 27px -5px rgb(50 50 93 / 25%), 0 8px 16px -8px rgb(0 0 0 / 30%), 0 -6px 16px -6px rgb(0 0 0 / 3%);
+}
+
+.search:focus {
+    border: none;
+    outline: none;
 }
 
 /*article-nav*/
