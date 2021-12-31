@@ -255,13 +255,47 @@ main {
 }
 
 .sub-article {
-    width: calc(100% - 2rem);
+    width: calc(100% - 2rem); 
     padding: 0 1rem;
     margin-bottom: 3rem;
+    
 }
 
 .sub-header {
     width: 100%;
+    display: flex;
+}
+
+.sub-header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.subimg-holder {
+    min-height: 176px;
+    min-width: 176px;
+    border: 8px solid #d33a2c;
+    border-radius: 25px;
+    transform: scale(.54) rotateZ(calc(-1 * (11 * 1deg)));
+    transform-origin: bottom left;
+    transition: transform .2s ease-out;
+    overflow: hidden;
+    width: auto;
+    height: 11rem;
+    position: relative;
+    top: -50px;
+}
+
+.subimg-holder:hover {
+    transform: scale(0.54) rotateZ(0);
+}
+
+.sub-img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    transform: scale(1.2) rotateZ(calc(11 * 1deg));
+    transition: transform .2s ease-out;
 }
 
 /*Newsletter Aside styles*/
