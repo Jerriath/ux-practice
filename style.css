@@ -120,7 +120,7 @@ form {
 
 /*article-nav*/
 .header-sub {
-    width: 100%;
+    max-width: 100%;
     padding-left: 35px;
     padding-top: .3rem;
     box-shadow: 0 4px 20px 0 rgb(0 0 0 / 12%);
@@ -258,7 +258,7 @@ main {
     width: calc(100% - 2rem); 
     padding: 0 1rem;
     margin-bottom: 3rem;
-    
+
 }
 
 .sub-header {
@@ -300,14 +300,89 @@ main {
 
 /*Newsletter Aside styles*/
 aside {
+    box-sizing: border-box;
     width: 40%;
+    padding: 0 1rem;
     padding-top: 20px;
+    padding-left: 8.33333%;
 }
 
 .newsletter {
-    width: 91.66666%;
+    box-sizing: border-box;
+    width: 100%;
     margin-top: 125px;
-    margin-left: 8.33333%;
+    padding: 125px 1.5em 2em 1.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #e7f8ff;
+    border-radius: 11px;
+    align-items: center;
+    position: relative;
+}
+
+.newsletter-img {
+    position: absolute;
+    top: 0;
+    background: 0 0;
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+
+.newsletter-anchor {
+    background-color: white;
+    border-radius: 11px;
+    padding: 0.5em 0.8em;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 12%);
+    margin: 0;
+}
+
+.newsletter-subtitle {
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 0;
+    margin-top: 1.25em;
+}
+
+.newsletter-content {
+    font-size: 19px;
+    line-height: 1.7em;
+    margin: 1.5em 0;
+}
+
+.email-form {
+    box-shadow: 0 13px 27px -5px rgb(50 50 93 / 25%), 0 8px 16px -8px rgb(0 0 0 / 30%), 0 -6px 16px -6px rgb(0 0 0 / 3%);
+    display: flex;
+}
+
+.email-input {
+    width: 60%;
+    border: 0;
+    font-size: 22px;
+    background: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
+    padding: .75em 1em;
+}
+
+.email-input:placeholder-shown {
+    font-style: italic;
+}
+
+.email-submit {
+    width: 40%;
+    border: 0;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    background: #0168b8;
+    color: white;
+    font-size: 1.5em;
+}
+
+.newsletter-caption {
+    margin: 2em 0;
+    margin-bottom: 1em;
 }
 
 /*Explore Section styles*/
@@ -348,19 +423,72 @@ footer {
     padding: 2rem 0;
     padding-bottom: 3rem;
     width: 100%;
+    text-align: center;
+}
+
+.footer-header {
+    font-size: 21px;
+    color: white;
+    letter-spacing: 0.05em;
+    margin: 2em 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3.5em;
 }
 
 .company-msg {
-
+    color: white;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
 }
 
 /*Footer Topics styles*/
 .footer-topics {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85vw;
+    max-width: 1635px;
+    margin: 0 auto;
+    justify-content: center;
+}
 
+.footer-item {
+    margin: 0.25em 0;
+    margin-left: 1.4em;
+    font-size: 25px;
+    color: white;
+    line-height: 1.6em;
+    transition: color 0.1s linear;
+    cursor: pointer;
+}
+
+.footer-item:hover {
+    color:rgba(20, 20, 20, 0.8); 
+}
+
+.footer-item::marker {
+    color: rgba(0, 0, 0, 0.35);
 }
 
 /*Footer Links styles*/
 .footer-links {
+    margin: 0 35%;
+    padding: 1em 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 5em;
+    margin-top: 1em;
+}
+
+.link-item {
+    margin-right: 1em;
+    font-size: 16px;
+    color: white;
 
 }
 
@@ -396,6 +524,11 @@ ul {
 
 .grey-font {
     color: #767676;
+}
+
+.anchor-font {
+    color: #006fc6;
+    cursor: pointer;
 }
 
 .small-caps-font {
