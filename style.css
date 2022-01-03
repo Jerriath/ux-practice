@@ -1,0 +1,560 @@
+/*---------- Table of Contents ----------
+    1. Header styles
+        1.a) main-nav
+        1.b) article-nav
+    2. Main Content styles
+        2.a) Article Section styles
+        2.b) Newsletter Aside styles
+        2.c) Explore Section styles
+    3. Footer styles
+        3.a) Footer Topics styles
+        3.b) Footer Links styles
+    4. General styles (like fonts and buttons)
+----------------------------------------*/
+
+
+
+/*----- Header styles -----*/
+
+header {
+    width: 100%;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    position: relative;
+    top: 0.7rem;
+    flex-shrink: 0;
+}
+
+/*Main-Nav styles*/
+.header-main {
+    width: 100%;
+    background-color: #d33a2c;
+    display: grid;
+    font-size: 22px;
+    padding: 1rem 2em;
+    grid-template-columns: min-content minmax(140px,2fr) 0 minmax(100px,350px);
+    align-items: center;
+    column-gap: 10px;
+    margin: 0;
+    box-sizing: border-box;
+    justify-content: flex-start;
+}
+
+.main-nav {
+    width: auto;
+    height: 100%;
+    grid-column: auto;
+}
+
+.main-list {
+    display: flex;
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+    width: 100%;
+    height: calc(100% - 0.8em);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4em 0;
+}
+
+.main-item {
+    padding: .35em .9em;
+}
+
+.more {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 11px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    margin: 0;
+    padding: .4em .5rem .4em 1rem;
+    box-shadow: 0 13px 7px -15px rgb(50 50 93 / 25%), 0 8px 16px -8px rgb(0 0 0 / 30%), 0 -6px 16px -6px rgb(0 0 0 / 3%);
+}
+
+.more::after {
+    background-image: url("./assets/cat.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    content: "";
+    width: 30px;
+    height: 30px;
+    margin-left: 9px;
+    display: block;
+}
+
+form {
+    max-width: 500px;
+    background-color: white;
+    box-sizing: border-box;
+    border-radius: 11px;
+}
+
+.search {
+    width: 100%;
+    padding: 0;
+    border: 0;
+    font-size: 22px;
+    background: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    border-radius: 11px;
+    padding: 1rem 15px 1rem 52px;
+    background-image: url("./assets/search.svg");
+    background-repeat: no-repeat;
+    background-position: 15px 45%;
+    box-shadow: 0 13px 27px -5px rgb(50 50 93 / 25%), 0 8px 16px -8px rgb(0 0 0 / 30%), 0 -6px 16px -6px rgb(0 0 0 / 3%);
+}
+
+.search:focus {
+    border: none;
+    outline: none;
+}
+
+/*article-nav*/
+.header-sub {
+    max-width: 100%;
+    padding-left: 35px;
+    padding-top: .3rem;
+    box-shadow: 0 4px 20px 0 rgb(0 0 0 / 12%);
+    padding-bottom: 0.3em;
+}
+
+.article-nav {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0.25em 0;
+    margin-top: 0.25em;
+    margin-bottom: 0.35em;
+}
+
+.article-item {
+    padding: 2px 12px;
+    color: #d33a2c;
+    font-weight: 700;
+    background-color: #ffe7e7;
+    border-radius: 11px;
+    border: 1px solid #fee0e0;
+    line-height: 36px;
+}
+
+
+
+/*----- Main Content styles -----*/
+
+main {
+    width: 85%;
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Article Section styles*/
+.article-section {
+    width: 60%;
+}
+
+.main-article {
+    width: calc(100% - 2rem);
+    padding: 0 1rem;
+    margin-top: 2.25em;
+    margin-bottom: 3em;
+}
+
+.main-header {
+    width: 100%;
+    display: flex;
+}
+
+.shadow-div {
+    position: relative;
+    top: 20px;
+}
+
+.shadow-div::before {
+    display: block;
+    content: "";
+    height: 90%;
+    width: 160%;
+    position: absolute;
+    background-image: url("./assets/imgs/shadow.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    top: 70%;
+    left: -40%;
+    right: 0;
+    transform-origin: 30% 50%;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+.shadow-div:hover::before {
+    opacity: 0;
+}
+
+.img-holder {
+    min-height: 176px;
+    min-width: 176px;
+    border: 8px solid #d33a2c;
+    border-radius: 25px;
+    transform: scale(.84) rotateZ(calc(-1 * (11 * 1deg)));
+    transform-origin: bottom left;
+    transition: transform .2s ease-out;
+    overflow: hidden;
+    width: auto;
+    height: 11rem;
+    position: relative;
+}
+
+.img-holder:hover {
+    transform: scale(0.84) rotateZ(0);
+}
+
+.main-img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    transform: scale(1.2) rotateZ(calc(11 * 1deg));
+    transition: transform .2s ease-out;
+}
+
+.main-header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-title {
+    font-size: calc(1.625rem + 1.3vw);
+    margin: .35em 0 .25em;
+    letter-spacing: 0.02em;
+}
+
+.main-caption {
+    margin: 0;
+    font-size: 19px;
+}
+
+.author {
+    font-size: 20px;
+}
+
+.main-content {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.sub-article {
+    width: calc(100% - 2rem); 
+    padding: 0 1rem;
+    margin-bottom: 3rem;
+
+}
+
+.sub-header {
+    width: 100%;
+    display: flex;
+}
+
+.sub-header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.subimg-holder {
+    min-height: 176px;
+    min-width: 176px;
+    border: 8px solid #d33a2c;
+    border-radius: 25px;
+    transform: scale(.54) rotateZ(calc(-1 * (11 * 1deg)));
+    transform-origin: bottom left;
+    transition: transform .2s ease-out;
+    overflow: hidden;
+    width: auto;
+    height: 11rem;
+    position: relative;
+    top: -50px;
+}
+
+.subimg-holder:hover {
+    transform: scale(0.54) rotateZ(0);
+}
+
+.sub-img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    transform: scale(1.2) rotateZ(calc(11 * 1deg));
+    transition: transform .2s ease-out;
+}
+
+/*Newsletter Aside styles*/
+aside {
+    box-sizing: border-box;
+    width: 40%;
+    padding: 0 1rem;
+    padding-top: 20px;
+    padding-left: 8.33333%;
+}
+
+.newsletter {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 125px;
+    padding: 125px 1.5em 2em 1.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #e7f8ff;
+    border-radius: 11px;
+    align-items: center;
+    position: relative;
+}
+
+.newsletter-img {
+    position: absolute;
+    top: 0;
+    background: 0 0;
+    transform: translate(-50%,-50%);
+    left: 50%;
+}
+
+.newsletter-anchor {
+    background-color: white;
+    border-radius: 11px;
+    padding: 0.5em 0.8em;
+    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 12%);
+    margin: 0;
+}
+
+.newsletter-subtitle {
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 0;
+    margin-top: 1.25em;
+}
+
+.newsletter-content {
+    font-size: 19px;
+    line-height: 1.7em;
+    margin: 1.5em 0;
+}
+
+.email-form {
+    box-shadow: 0 13px 27px -5px rgb(50 50 93 / 25%), 0 8px 16px -8px rgb(0 0 0 / 30%), 0 -6px 16px -6px rgb(0 0 0 / 3%);
+    display: flex;
+}
+
+.email-input {
+    width: 60%;
+    border: 0;
+    font-size: 22px;
+    background: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
+    padding: .75em 1em;
+}
+
+.email-input:placeholder-shown {
+    font-style: italic;
+}
+
+.email-submit {
+    width: 40%;
+    border: 0;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    background: #0168b8;
+    color: white;
+    font-size: 1.5em;
+}
+
+.newsletter-caption {
+    margin: 2em 0;
+    margin-bottom: 1em;
+}
+
+/*Explore Section styles*/
+.explore-section {
+    width: 100%;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 0 1.5rem;
+    background: #fff;
+}
+
+.accessability {
+    background-color: #f1fdf8;
+    margin: 1.5rem 0;
+}
+
+.generator {
+    background-color: #fef1f0;
+    margin: 1.5rem 0;
+}
+
+.boilerplate {
+    background-color: #fbecf9;
+    margin: 1.5rem 0;
+}
+
+
+
+/*----- Footer styles -----*/
+
+footer {
+    background-image: url("https://www.smashingmagazine.com/images/footer/large-screen__left.svg");
+    background-repeat: no-repeat;
+    background-size: 12em auto;
+    background-position: left 15% bottom 2em;
+    background-color: #d33a2c;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-header {
+    font-size: 21px;
+    color: white;
+    letter-spacing: 0.05em;
+    margin: 2em 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3.5em;
+}
+
+.company-msg {
+    color: white;
+    font-size: 16px;
+    line-height: 26px;
+    margin: 0;
+}
+
+/*Footer Topics styles*/
+.footer-topics {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85vw;
+    max-width: 1635px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.footer-item {
+    margin: 0.25em 0;
+    margin-left: 1.4em;
+    font-size: 25px;
+    color: white;
+    line-height: 1.6em;
+    transition: color 0.1s linear;
+    cursor: pointer;
+}
+
+.footer-item:hover {
+    color:rgba(20, 20, 20, 0.8); 
+}
+
+.footer-item::marker {
+    color: rgba(0, 0, 0, 0.35);
+}
+
+/*Footer Links styles*/
+.footer-links {
+    margin: 0 35%;
+    padding: 1em 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 5em;
+    margin-top: 1em;
+}
+
+.link-item {
+    margin-right: 1em;
+    font-size: 16px;
+    color: white;
+
+}
+
+
+
+/*----- General styles -----*/
+
+body {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+.default-font {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.thick-font {
+    font-weight: bold;
+}
+
+.thin-font {
+    font-weight: lighter;
+}
+
+.red-font {
+    color: #d33a2c;
+}
+
+.grey-font {
+    color: #767676;
+}
+
+.anchor-font {
+    color: #006fc6;
+    cursor: pointer;
+}
+
+.small-caps-font {
+    font-variant: small-caps;
+}
+
+.dark-grey-font {
+    color: #333;
+}
+
+.sans-serif-font {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.serif-font {
+    font-family: 'PT Serif', serif;
+}
+
+.new-times-font {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.italics {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
